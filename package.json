@@ -1,0 +1,43 @@
+{
+    "name": "employee-performance-review-system-frontend",
+    "version": "1.0.0",
+    "description": "Frontend for the Employee Performance Review System built with Next.js.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@headlessui/react": "^1.7.7",
+        "autoprefixer": "^10.4.15",
+        "axios": "^1.4.0",
+        "classnames": "^2.3.2",
+        "dotenv": "^16.0.4",
+        "eslint": "^8.47.0",
+        "eslint-config-next": "^13.5.6",
+        "next": "^15.0.4",
+        "next-auth": "^4.20.1",
+        "postcss": "^8.4.22",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-icons": "^4.12.0",
+        "swr": "^2.0.0",
+        "tailwindcss": "^3.3.2"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "@types/node": "22.10.1",
+        "@types/react": "19.0.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^3.1.2",
+        "typescript": "^5.3.3"
+    },
+    "browserslist": [
+        "defaults",
+        "not IE 11",
+        "maintained node versions"
+    ]
+}
