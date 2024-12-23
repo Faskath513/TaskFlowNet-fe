@@ -12,7 +12,7 @@ const ManagerLayout = ({ children }) => {
 
       <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
         {/* Navbar */}
-        <Navbar />
+        {/* <Navbar /> */}
         <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       {/* Sidebar */}
       <ManagerSidebar />

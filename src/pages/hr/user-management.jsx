@@ -159,6 +159,12 @@ const UserManagement = () => {
       ...prevState,
       [name]: value,
     }));
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
+    // if (!emailRegex.test(email)) {
+    //   setEmailError("Invalid email address. Please enter a valid email.");
+    // } else {
+    //   setEmailError(""); // Clear error if valid
+    // }
   };
 
   // Handle dynamic role-specific details
@@ -178,25 +184,34 @@ const UserManagement = () => {
 
   return (
     <HRLayout>
-      <Typography
+     <Typography
         variant="h3"
         gutterBottom
         sx={{
           textAlign: 'center', // Centers the text
-          color: '#15B2C0', // Apply the custom color
+          color: 'rgb(223, 129, 14)', // Apply the custom color
         }}
       >
         Users List
-      </Typography>
+      </Typography> 
+
 
       {/* Create or Update User Button */}
       <Button
         variant="contained"
         color="primary"
+        sx={{
+          borderRadius: '5px',
+          backgroundColor: 'rgb(19, 66, 54)',
+          padding: '10px 20px',
+          '&:hover': {
+            backgroundColor: '#388e3c',
+          },
+        }}
         onClick={() => setOpen(true)}
         style={{ marginBottom: "20px" }}
       >
-        {isUpdate ? "Update User" : "Create User"}
+        {isUpdate ? "Update Account" : "Add Account"}
       </Button>
 
       {/* User Table */}

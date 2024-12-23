@@ -51,7 +51,7 @@ const HRDashboard = () => {
       <Box sx={{ padding: 4, backgroundColor: '#f4f6f8', minHeight: '100vh' }}>
         {/* Heading */}
         <Typography variant="h3" sx={{ fontWeight: 'bold', marginBottom: 2 }}>
-          📊 HR Dashboard
+           HR Dashboard
         </Typography>
 
         {/* Quick Stats Cards */}

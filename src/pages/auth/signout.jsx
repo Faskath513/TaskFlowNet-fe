@@ -48,7 +48,7 @@ const SignOut = () => {
         alignItems: "center",
         justifyContent: "center",
         minHeight: "100vh",
-        background: "linear-gradient(135deg, #153B60, #15B2C0)",
+        background: "linear-gradient(135deg,rgb(14, 66, 43),rgb(169, 154, 122))",
         padding: 3,
       }}
     >

@@ -1,9 +1,20 @@
 import React from 'react';
-import { Box, List, ListItem, ListItemIcon, ListItemText, Divider, Typography, Avatar } from '@mui/material';
+import { 
+  Box, 
+  List, 
+  ListItem, 
+  ListItemIcon, 
+  ListItemText, 
+  Divider, 
+  Typography, 
+  Avatar, 
+  Button 
+} from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import EventNoteIcon from '@mui/icons-material/EventNote';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useRouter } from 'next/router';
 
 const EmployeeSidebar = () => {
@@ -18,7 +29,7 @@ const EmployeeSidebar = () => {
       sx={{
         width: 260,
         height: '100vh',
-        backgroundColor: '#153B60',
+        backgroundColor: 'rgb(4, 44, 34)',
         color: 'white',
         boxShadow: 3,
         display: 'flex',
@@ -27,21 +38,27 @@ const EmployeeSidebar = () => {
         position: 'fixed',
       }}
     >
-      
-      
-            {/* Profile Section centered */}
-            <Box onClick={() => handleNavigation('/profile/profile')} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 3 }}>
-              <Avatar alt="Employee" src="" sx={{ marginBottom: 1, width: 100, height: 100 }} />
-              <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'white' }}>
-                  CodeNex
-                </Typography>
-                <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.6)' }}>
-                  Employee
-                </Typography>
-              </Box>
-            </Box>
+     {/* Logo Section at the Top-Left */}
+           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', marginBottom: 3 }}>
+                   {/* Replace 'logo.png' with your actual logo file path */}
+                   <img src="/images/logo.png" alt="Logo" style={{ width: 100, marginBottom: 5 }} />
+                 </Box>
 
+      {/* Profile Section */}
+      <Box
+        onClick={() => handleNavigation('/profile/profile')}
+        sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 3 }}
+      >
+        <Avatar alt="Employee" src="" sx={{ marginBottom: 1, width: 100, height: 100 }} />
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography variant="body1" sx={{ fontWeight: 'bold', color: 'white' }}>
+            Employee
+          </Typography>
+          <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.6)' }}>
+            Profile
+          </Typography>
+        </Box>
+      </Box>
 
       <Divider sx={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', marginBottom: 2 }} />
 
@@ -62,14 +79,14 @@ const EmployeeSidebar = () => {
           />
         </ListItem>
 
-        {/* Goal Management */}
-        <ListItem button onClick={() => handleNavigation('/employee/goals')}>
+        {/* My Task */}
+        <ListItem button onClick={() => handleNavigation('/employee/tasks')}>
           <ListItemIcon>
             <AssignmentIcon sx={{ color: 'white' }} />
           </ListItemIcon>
           <ListItemText
-            primary="My Goals"
-            secondary="View and manage your personal goals"
+            primary="My Task"
+            secondary="View and manage your personal tasks"
             primaryTypographyProps={{ color: 'white' }}
             secondaryTypographyProps={{
               sx: { color: 'rgba(255, 255, 255, 0.6)' },
@@ -77,14 +94,14 @@ const EmployeeSidebar = () => {
           />
         </ListItem>
 
-        {/* Performance Reviews */}
-        <ListItem button onClick={() => handleNavigation('/employee/reviews')}>
+        {/* Performance Feedback */}
+        <ListItem button onClick={() => handleNavigation('/employee/feedback')}>
           <ListItemIcon>
             <EventNoteIcon sx={{ color: 'white' }} />
           </ListItemIcon>
           <ListItemText
-            primary="Performance Reviews"
-            secondary="Review feedback and evaluations"
+            primary="Performance Feedback"
+            secondary="View feedback"
             primaryTypographyProps={{ color: 'white' }}
             secondaryTypographyProps={{
               sx: { color: 'rgba(255, 255, 255, 0.6)' },
@@ -110,7 +127,19 @@ const EmployeeSidebar = () => {
 
       <Divider sx={{ backgroundColor: 'rgba(255, 255, 255, 0.2)', marginY: 2 }} />
 
-     
+      {/* Sign Out */}
+      <ListItem color="inherit" sx={{ color: 'white' }} onClick={() => router.push('/auth/signout')}>
+        <ListItemIcon>
+          <ExitToAppIcon sx={{ color: 'white' }} />
+        </ListItemIcon>
+        <ListItemText
+          primary="Sign Out"
+          primaryTypographyProps={{ color: 'white' }}
+          secondaryTypographyProps={{
+            sx: { color: 'rgba(255, 255, 255, 0.6)' },
+          }}
+        />
+      </ListItem>
     </Box>
   );
 };

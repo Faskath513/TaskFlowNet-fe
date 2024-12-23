@@ -49,7 +49,7 @@ const EmployeeDashboard = () => {
         {/* Header */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 2 }}>
           <Typography variant="h3" sx={{ fontWeight: 'bold' }}>
-            📊 Employee Dashboard
+            Employee Dashboard
           </Typography>
         </Box>
 
@@ -59,23 +59,14 @@ const EmployeeDashboard = () => {
             <Card>
               <CardContent>
                 <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
-                  📝 My Goals
+                  📝 My Tasks
                 </Typography>
                 <Typography variant="h4">3</Typography>
               </CardContent>
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: 'bold', marginBottom: 1 }}>
-                  👥 My Feedback
-                </Typography>
-                <Typography variant="h4">2</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+         
 
           <Grid item xs={12} md={3}>
             <Card>

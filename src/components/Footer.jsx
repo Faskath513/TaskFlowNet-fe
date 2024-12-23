@@ -8,7 +8,7 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
-        backgroundColor: '#153B60',
+        backgroundColor: 'rgb(15, 51, 49)',
         color: 'white',
         padding: 2,
         marginTop: 'auto',
@@ -16,7 +16,7 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Typography variant="body2" align="center">
-          &copy; {new Date().getFullYear()} CodeNex. All rights reserved.
+          &copy; {new Date().getFullYear()} Faskath. All rights reserved.
         </Typography>
       </Container>
     </Box>

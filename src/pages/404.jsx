@@ -54,7 +54,7 @@ const FoundPage = () => {
           maxWidth: '600px',
           boxShadow: 3,
           borderRadius: 2,
-          background: 'linear-gradient(145deg, #153B60, #15B2C0)',
+          background: 'linear-gradient(145deg,rgb(15, 64, 63),rgb(139, 136, 94))',
           color: '#fff',
         }}
       >
@@ -91,14 +91,11 @@ const FoundPage = () => {
                 color="secondary"
                 onClick={handleGoHome}
                 sx={{
-                  padding: '12px 24px',
-                  borderRadius: '50px',
-                  fontSize: '1.2rem',
-                  fontWeight: 'bold',
-                  textTransform: 'none',
-                  boxShadow: 4,
+                  borderRadius: '20px',
+                  backgroundColor: 'rgb(19, 66, 54)',
+                  padding: '10px 20px',
                   '&:hover': {
-                    backgroundColor: '#15B2C0',
+                    backgroundColor: '#388e3c',
                   },
                 }}
               >
@@ -113,16 +110,12 @@ const FoundPage = () => {
                 color="inherit"
                 onClick={() => router.push('/contact')}
                 sx={{
-                  padding: '12px 24px',
-                  borderRadius: '50px',
+                  borderRadius: '20px',
                   fontSize: '1.2rem',
-                  fontWeight: 'bold',
-                  textTransform: 'none',
-                  borderColor: '#fff',
+                
                   color: '#fff',
                   '&:hover': {
-                    backgroundColor: '#153B60',
-                    borderColor: '#153B60',
+                    backgroundColor: 'rgb(19, 66, 54)',
                   },
                 }}
               >

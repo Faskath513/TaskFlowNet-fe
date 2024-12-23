@@ -118,20 +118,22 @@ const SignIn = () => {
           <Box sx={{ display: "flex", justifyContent: "center", marginBottom: 3 }}>
             <Avatar
               sx={{
-                bgcolor: "#153B60",
+                bgcolor: "rgb(14, 50, 41)",
                 width: 70,
                 height: 70,
               }}
             >
               <Typography variant="h4" sx={{ color: "white" }}>
-                R
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                          <Avatar src="/images/logo.png" alt="Logo" style={{ height: 60, width: 60 }} />
+                        </Box>
               </Typography>
-            </Avatar>
+            </Avatar >
           </Box>
-          <Typography variant="h5" align="center" sx={{ marginBottom: 3, fontWeight: "bold" }}>
+          <Typography variant="h4" align="center" sx={{ marginBottom: 3, fontWeight: "bold" }}>
             Welcome Back
           </Typography>
-          <Typography variant="body2" align="center" sx={{ marginBottom: 3, color: "#6c757d" }}>
+          <Typography variant="h6" align="center" sx={{ marginBottom: 3, color: "#6c757d" }}>
             Please sign in to continue
           </Typography>
           <TextField
@@ -165,9 +167,9 @@ const SignIn = () => {
             disabled={loading}
             sx={{
               height: 45,
-              backgroundColor: '#153B60',
+              backgroundColor: 'rgb(13, 62, 50)',
               '&:hover': {
-                backgroundColor: '#0d2a43',
+                backgroundColor: 'rgb(7, 31, 25)',
               },
               borderRadius: 5,
             }}
@@ -181,7 +183,7 @@ const SignIn = () => {
 
           <Box sx={{ display: "flex", justifyContent: "center", marginTop: 2 }}>
             <Button
-              color="primary"
+              color="green"
               sx={{ textTransform: "none", fontWeight: "bold" }}
               onClick={() => setOpenForgetPassword(true)}
             >

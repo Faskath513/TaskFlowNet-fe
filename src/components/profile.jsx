@@ -154,14 +154,16 @@ const Profile = () => {
               variant="contained"
               color="primary"
               sx={{
-                borderRadius: '20px',
-                backgroundColor: 'rgb(19, 66, 54)',
-                padding: '10px 20px',
+                padding: '12px 24px',
+                borderRadius: '50px',
+                fontSize: '1rem',
+                fontWeight: 'bold',
+                boxShadow: 2,
                 '&:hover': {
-                  backgroundColor: '#388e3c',
+                  backgroundColor: '#153B60',
+                  transform: 'scale(1.05)',
                 },
-              }} 
-
+              }}
               onClick={() => router.push('/auth/signout')}
             >
               Close

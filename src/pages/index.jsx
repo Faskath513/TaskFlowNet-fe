@@ -15,35 +15,29 @@ const Home = () => {
       }}
     >
       {/* Navbar */}
-      <AppBar position="static" sx={{ backgroundColor: '#153B60' }}>
+      <AppBar position="static" sx={{ backgroundColor: 'rgb(16, 51, 49)', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.3)' }}>
         <Toolbar>
           {/* App Title */}
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            {/* App Logo */}
-            <img src="/images/logo.png" alt="RevX Logo" style={{ height: '40px',width:'120px', flexGrow: 1 }} />
+          <Typography variant="h6" sx={{ flexGrow: 1, fontWeight: 'bold', fontSize: '1.6rem' }}>
+            TaskFlowNet
           </Typography>
 
           {/* Search Icon */}
-          <IconButton color="inherit" sx={{ marginRight: 2 }}>
+          <IconButton color="inherit" sx={{ marginRight: 2, transition: 'transform 0.3s ease', '&:hover': { transform: 'scale(1.2)' } }}>
             <SearchIcon />
           </IconButton>
 
           {/* Notification Button with Badge */}
-          <IconButton color="inherit" sx={{ marginRight: 2 }}>
+          <IconButton color="inherit" sx={{ marginRight: 2, transition: 'transform 0.3s ease', '&:hover': { transform: 'scale(1.2)' } }}>
             <Badge badgeContent={3} color="error">
               <NotificationsIcon />
             </Badge>
           </IconButton>
 
           {/* Sign In Link */}
-          {/* <Link href="/auth/signin" passHref>
-            <Button color="inherit">Sign In</Button>
-          </Link> */}
-
-          {/* Sign Out Link */}
-          {/* <Link href="/api/auth/signout" passHref>
-            <Button color="inherit">Sign Out</Button>
-          </Link> */}
+          <Link href="/auth/signin" passHref>
+            <Button color="inherit" sx={{ fontWeight: 'bold', letterSpacing: '1px' }}>Sign In</Button>
+          </Link>
         </Toolbar>
       </AppBar>
 
@@ -54,25 +48,26 @@ const Home = () => {
           justifyContent: 'center',
           alignItems: 'center',
           flex: 1,
-          background: 'linear-gradient(135deg, #153B60, #15B2C0 90%)',
+          background: 'linear-gradient(135deg,rgb(4, 44, 34),rgb(233, 208, 185) 90%)',
           color: 'white',
-          padding: 4,
+          padding: { xs: 2, sm: 4 },
+          textAlign: 'center',
         }}
       >
         <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            {/* Text Content - 60% */}
+          <Grid container spacing={4} alignItems="center" justifyContent="center" direction={{ xs: 'column-reverse', md: 'row' }}>
+            {/* Text Content - 50% */}
             <Grid item xs={12} md={6}>
               <Typography
                 variant="h2"
                 sx={{
                   fontWeight: 'bold',
                   marginBottom: 3,
-                  textShadow: '3px 3px 12px rgba(0, 0, 0, 0.4)',
-                  letterSpacing: 1,
+                  textShadow: '3px 3px 12px rgb(9, 49, 47)',
+                  letterSpacing: 1.5,
                 }}
               >
-                Welcome to RevX
+                Welcome to TaskFlowNet
               </Typography>
 
               <Typography
@@ -83,9 +78,12 @@ const Home = () => {
                   marginBottom: 4,
                   textShadow: '2px 2px 6px rgba(0, 0, 0, 0.2)',
                   opacity: 0.9,
+                  maxWidth: '600px',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
                 }}
               >
-                Empower employees, managers, and HR professionals to effectively manage employee performance, conduct performance reviews, set actionable goals, and provide valuable feedback to drive continuous improvement.
+                Empower teams, managers, and individuals to effectively organize, prioritize, and track tasks, set clear goals, and provide actionable feedback to ensure seamless collaboration, increase productivity, and drive continuous progress.
               </Typography>
 
               {/* Get Started Button */}
@@ -93,9 +91,9 @@ const Home = () => {
                 <Button
                   variant="contained"
                   sx={{
-                    backgroundColor: ' #153B60',
+                    backgroundColor: 'rgb(30, 63, 61)',
                     '&:hover': {
-                      backgroundColor: 'rgb(21, 40, 58)',
+                      backgroundColor: 'rgb(15, 51, 49)',
                       transform: 'scale(1.05)',
                     },
                     borderRadius: '50px',
@@ -111,11 +109,11 @@ const Home = () => {
               </Link>
             </Grid>
 
-            {/* Image - 40% */}
+            {/* Image - 50% */}
             <Grid item xs={12} md={6}>
               <Box
                 component="img"
-                src="/images/painting-mountain-lake-with-mountain-background_188544-9126.jpg.avif" // Replace with your image path
+                src="/images/u75437pib1m.jpg" // Replace with your image path
                 alt="Performance App Hero"
                 sx={{
                   width: '100%',
@@ -123,6 +121,10 @@ const Home = () => {
                   objectFit: 'cover', // Ensure image covers the space
                   borderRadius: 2,
                   boxShadow: '0px 4px 16px rgba(0, 0, 0, 0.2)',
+                  transition: 'transform 0.4s ease',
+                  '&:hover': {
+                    transform: 'scale(1.05)',
+                  },
                 }}
               />
             </Grid>
